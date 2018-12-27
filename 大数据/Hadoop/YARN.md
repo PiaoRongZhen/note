@@ -9,6 +9,7 @@ The NodeManager is the per-machine framework agent who is responsible for contai
 
 The per-application ApplicationMaster is, in effect, a framework specific library and is tasked with negotiating resources from the ResourceManager and working with the NodeManager(s) to execute and monitor the tasks.
 ![YARN](picture/YARN.jpg)
+
 The ResourceManager has two main components: Scheduler and ApplicationsManager.
 
 The Scheduler is responsible for allocating resources to the various running applications subject to familiar constraints of capacities, queues etc.  
