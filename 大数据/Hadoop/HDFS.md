@@ -47,6 +47,7 @@ It also determines the mapping of blocks to DataNodes.
 The DataNodes are responsible for serving read and write requests from the file system’s clients.  
 The DataNodes also perform block creation, deletion, and replication upon instruction from the NameNode.
 ![HDFSArchitecture](picture/HDFSArchitecture.jpg)
+
 The NameNode and DataNode are pieces of software designed to run on commodity machines.  
 These machines typically run a GNU/Linux operating system (OS).  
 HDFS is built using the Java language; any machine that supports Java can run the NameNode or the DataNode software.  
