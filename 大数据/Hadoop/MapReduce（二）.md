@@ -1,4 +1,4 @@
-# 关于MapReduce
+# MapReduce
 ## map和reduce
 MapReduce任务过程分为两个处理阶段：map阶段和reduce阶段。每阶段都以键-值对作为输入和输出，其类型由程序员来选择。程序员还需要写两个函数：map函数和reduce函数。  
 map函数的输出经由MapReduce框架处理后，最后发送到reduce函数。这个处理过程基于键来对键-值对进行排序和分组。  
