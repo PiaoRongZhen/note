@@ -1,6 +1,7 @@
 # MapReduce
 MapReduce作业（job）是客户端需要执行的一个工作单元：它包括输入数据、MapReduce程序和配置信息。Hadoop将作业分成若干个任务（task）来执行，其中包括两类任务：map任务和reduce任务。这些任务运行在集群的节点上，并通过YARN进行调度。如果一个任务失败，它将在另一个不同的节点上自动重新调度运行。  
 Hadoop将MapReduce的输入数据划分成等长的小数据块，称为输入分片（input split）或简称“分片”。Hadoop为每个分片构建一个map任务，并由该任务来运行用户自定义的map函数从而处理分片中的每条记录。  
+The framework then calls map() for each key/value pair in the InputSplit for that task.  
 对于大多数作业来说，一个合理的分片大小趋向于HDFS的一个块的大小，默认是128MB，不过可以针对集群调整这个默认值（对所有新建的文件），或在每个文件创建时指定。  
 Hadoop在存储有输入数据（HDFS中的数据）的节点上运行map任务，可以获得最佳性能，因为它无需使用宝贵的集群带宽资源。这就是所谓的“数据本地化优化”。  
 
