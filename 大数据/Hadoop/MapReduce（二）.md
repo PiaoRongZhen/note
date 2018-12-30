@@ -89,6 +89,7 @@ FileOutputFormat.setOutputPath(job, new Path(args[1]));
 setOutputKeyClass()和setOutputValueClass()方法控制reduce函数的输出类型，并且必须和Reduce类产生的相匹配。map函数的输出类型默认情况下和reduce函数是相同的，因此如果mapper产生出和reducer相同的类型时，不需要单独设置。但是，如果不同，则必须通过setMapOutputKeyClass()和setMapOutputValueClass()方法来设置map函数的输出类型。  
 
 输入的类型通过输入格式来控制，我们的例子中没有设置，因为使用的是默认的TextInputFormat（文本输入格式）。  
+TextInputFormat: An InputFormat for plain text files. Files are broken into lines. Either linefeed or carriage-return are used to signal end of line. Keys are the position in the file, and values are the line of text.  
 
 在设置定义map和reduce函数的类之后，可以开始运行作业。Job中的waitForCompletion()方法提交作业并等待执行完成。该方法唯一的参数是一个标识，指示是否已生成详细输出。当标识为true时，作业会把其进度信息写到控制台。  
 
