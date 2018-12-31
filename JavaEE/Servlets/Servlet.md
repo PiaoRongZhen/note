@@ -3,6 +3,8 @@ Servlet技术的核心是Servlet，它是所有Servlet类必须直接或间接�
 
 Servlet接口定义了Servlet与Servlet容器之间的契约。这个契约归结起来就是，Servlet容器将Servlet类载入内存，并在Servlet实例上调用具体的方法。在一个应用程序中，每种Servlet类型只能有一个实例。
 
+用户请求致使Servlet容器调用Servlet的Service方法，并传入一个ServletRequest实例和一个ServletResponse实例。ServletRequest中封装了当前的HTTP请求，因此，Servlet开发人员不必解析和操作原始的HTTP数据。ServletResponse表示当前用户的HTTP响应，使得将响应发回给用户变得十分容易。对于每一个应用程序，Servlet容器还会创建一个ServletContext实例。这个对象中封装了上下文（应用程序）的环境详情。每个上下文只有一个ServletContext。每个Servlet实例也都有一个封装Servlet配置的ServletConfig。
+
 Servlet接口中定义了以下5个方法：
 ```java
 void init(ServletConfig config) throws ServletException;
