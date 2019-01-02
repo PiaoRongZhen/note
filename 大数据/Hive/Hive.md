@@ -14,4 +14,4 @@ Hive is not designed for online transaction processing. It is best used for trad
 ![Hive](picture/Hive.jpg)
 
 Metastore（元数据存储）是一个独立的关系型数据库（通常是一个MySQL实例）。
-元数据存储中存储了如表的模式等元数据信息。用户在执行如create table x...等命令时会指定这些信息。
+元数据存储中存储了如表的模式等元数据信息。用户在执行如create table ...等命令时会指定这些信息。
