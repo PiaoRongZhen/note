@@ -12,5 +12,6 @@ Users are free to switch back and forth between these frameworks at any time. In
 Hive is not designed for online transaction processing. It is best used for traditional data warehousing tasks. Hive is designed to maximize scalability (scale out with more machines added dynamically to the Hadoop cluster), performance, extensibility, fault-tolerance, and loose-coupling with its input formats.  
 
 ![Hive](picture/Hive.jpg)
+
 Metastore（元数据存储）是一个独立的关系型数据库（通常是一个MySQL实例）。
 元数据存储中存储了如表的模式等元数据信息。用户在执行如create table x...等命令时会指定这些信息。
